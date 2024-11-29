@@ -11,9 +11,15 @@ vector<string> Tokenize(string Input)
     string token;
     stringstream strToken(Input);
 
-    while (getline(strToken, token, ' ') || getline(strToken, token, '.'))
+    while (getline(strToken, token, ' '))
     {
         Tokens.push_back(token);
+    }
+
+    while (getline(strToken, token, '.'))
+    {
+		Tokens.push_back(token);
+        Tokens.push_back(".");
     }
 
     return Tokens;
