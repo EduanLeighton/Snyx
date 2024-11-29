@@ -24,6 +24,7 @@
     <ProjectGuid>{2bcf81d4-0f96-49ce-aa60-80a214ef279a}</ProjectGuid>
     <RootNamespace>Circa</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>Snyx</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
