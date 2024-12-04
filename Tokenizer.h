@@ -61,7 +61,7 @@ public:
 private:
 	static bool isWhitespace(string c)
 	{
-		if (c == " " || c == "\t" || c == "\n" || c == "\r")
+		if (c == " " || c == "\t" || c == "\n" || c == "\r" || c == "")
 		{
 			return false;
 		}
