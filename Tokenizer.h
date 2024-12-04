@@ -1,4 +1,5 @@
-#pragma once
+#ifndef TOKNIZER_H
+#define TOKNIZER_H
 
 #include <iostream>
 #include <string>
@@ -71,3 +72,5 @@ private:
 		}
 	}
 };
+
+#endif // TOKNIZER_H
