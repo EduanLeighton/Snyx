@@ -23,5 +23,8 @@
     <ClInclude Include="TokenTypes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Tokenizer.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
