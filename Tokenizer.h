@@ -55,7 +55,7 @@ public:
 			//	k = i + 1;
 			//}
 
-			if (token[i] == ' ' || token[i] == '\n')
+			if (token[i] == ' ')
 			{
 				tempStr = token.substr(k, i - k);
 				if (isWhitespace(tempStr))
@@ -63,6 +63,14 @@ public:
 					Tokens.push_back(tempStr);
 				}
 				k = i + 1;
+			}
+			else if (i == token.length() - 1)
+			{
+				tempStr = token.substr(k, i - k + 1);
+				if (isWhitespace(tempStr))
+				{
+					Tokens.push_back(tempStr);
+				}
 			}
 		}
 
