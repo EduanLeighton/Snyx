@@ -27,25 +27,35 @@ public:
 
 		for (i = 0; i < token.length(); i++)
 		{
-			if (token[i] == ',')
-			{
-				tempStr = token.substr(k, i - k);
-				if (isWhitespace(tempStr))
-				{
-					Tokens.push_back(tempStr);
-				}
-				k = i + 1;
-			}
-			else if (token[i] == ' ')
-			{
-				tempStr = token.substr(k, i - k);
-				if (isWhitespace(tempStr))
-				{
-					Tokens.push_back(tempStr);
-				}
-				k = i + 1;
-			}
-			else if (token[i] == '.')
+			//if (token[i] == ',')
+			//{
+			//	tempStr = token.substr(k, i - k);
+			//	if (isWhitespace(tempStr))
+			//	{
+			//		Tokens.push_back(tempStr);
+			//	}
+			//	k = i + 1;
+			//}
+			//else if (token[i] == ' ')
+			//{
+			//	tempStr = token.substr(k, i - k);
+			//	if (isWhitespace(tempStr))
+			//	{
+			//		Tokens.push_back(tempStr);
+			//	}
+			//	k = i + 1;
+			//}
+			//else if (token[i] == '.')
+			//{
+			//	tempStr = token.substr(k, i - k);
+			//	if (isWhitespace(tempStr))
+			//	{
+			//		Tokens.push_back(tempStr);
+			//	}
+			//	k = i + 1;
+			//}
+
+			if (token[i] == ' ' || token[i] == '\n')
 			{
 				tempStr = token.substr(k, i - k);
 				if (isWhitespace(tempStr))
