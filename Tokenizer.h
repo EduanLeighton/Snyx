@@ -58,7 +58,7 @@ public:
 			if (token[i] == ' ')
 			{
 				tempStr = token.substr(k, i - k);
-				if (isWhitespace(tempStr))
+				if (!isWhitespace(tempStr))
 				{
 					Tokens.push_back(tempStr);
 				}
@@ -67,7 +67,7 @@ public:
 			else if (i == token.length() - 1)
 			{
 				tempStr = token.substr(k, i - k + 1);
-				if (isWhitespace(tempStr))
+				if (!isWhitespace(tempStr))
 				{
 					Tokens.push_back(tempStr);
 				}
@@ -82,11 +82,11 @@ private:
 	{
 		if (c == " " || c == "\t" || c == "\n" || c == "\r" || c == "")
 		{
-			return false;
+			return true;
 		}
 		else
 		{
-			return true;
+			return false;
 		}
 	}
 };
