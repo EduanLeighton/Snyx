@@ -34,7 +34,7 @@ public:
 				//if (token[i] == ',')
 				//{
 				//	tempStr = token.substr(k, i - k);
-				//	if (isWhitespace(tempStr))
+				//	if (tempStr != " " || tempStr != "\t" || tempStr != "\n" || tempStr != "\r" || tempStr != "")
 				//	{
 				//		Tokens.push_back(tempStr);
 				//	}
@@ -43,7 +43,7 @@ public:
 				//else if (token[i] == ' ')
 				//{
 				//	tempStr = token.substr(k, i - k);
-				//	if (isWhitespace(tempStr))
+				//	if (tempStr != " " || tempStr != "\t" || tempStr != "\n" || tempStr != "\r" || tempStr != "")
 				//	{
 				//		Tokens.push_back(tempStr);
 				//	}
@@ -52,7 +52,7 @@ public:
 				//else if (token[i] == '.')
 				//{
 				//	tempStr = token.substr(k, i - k);
-				//	if (isWhitespace(tempStr))
+				//	if (tempStr != " " || tempStr != "\t" || tempStr != "\n" || tempStr != "\r" || tempStr != "")
 				//	{
 				//		Tokens.push_back(tempStr);
 				//	}
@@ -63,7 +63,7 @@ public:
 				if (token[i] == ' ')
 				{
 					tempStr = token.substr(k, i - k);
-					if (!isWhitespace(tempStr))
+					if (tempStr != " " || tempStr != "\t" || tempStr != "\n" || tempStr != "\r" || tempStr != "")
 					{
 						Tokens.push_back(tempStr);
 					}
@@ -72,7 +72,7 @@ public:
 				else if (i == token.length() - 1)
 				{
 					tempStr = token.substr(k, i - k + 1);
-					if (!isWhitespace(tempStr))
+					if (tempStr != " " || tempStr != "\t" || tempStr != "\n" || tempStr != "\r" || tempStr != "")
 					{
 						Tokens.push_back(tempStr);
 					}
@@ -85,21 +85,7 @@ public:
 	}// tokenize
 
 private:
-	// Checks for whitespace
-	static bool isWhitespace(string c)
-	{
-		// Checks for whitespace
-		if (c == " " || c == "\t" || c == "\n" || c == "\r" || c == "")
-		{
-			// Return
-			return true;
-		}// If
-		else
-		{
-			// Return
-			return false;
-		}// Else
-	}// isWhitespace
+
 };
 
 #endif // TOKNIZER_H
