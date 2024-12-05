@@ -6,7 +6,6 @@
 #include <vector>
 #include <sstream>
 
-
 using namespace std;
 
 class Tokenizer
@@ -78,7 +77,7 @@ public:
 
 		// Return
 		return Tokens;
-	}// tokenize
+	}; // tokenize
 
 private:
 	// Procedure to post the token
@@ -96,8 +95,7 @@ private:
 			// Pushes the token
 			Tokens.push_back(tempStr);
 		}
-	};
-
+	}; // nameless
 
 };
 
