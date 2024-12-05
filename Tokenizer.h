@@ -24,58 +24,61 @@ public:
 		int i = 0, k = 0;
 
 		// Gets the string to tokenize
-		getline(strToken, token);
-
-		// Loops through the string
-		for (i = 0; i < token.length(); i++)
+		while (getline(strToken, token))
 		{
-			//if (token[i] == ',')
-			//{
-			//	tempStr = token.substr(k, i - k);
-			//	if (isWhitespace(tempStr))
-			//	{
-			//		Tokens.push_back(tempStr);
-			//	}
-			//	k = i + 1;
-			//}
-			//else if (token[i] == ' ')
-			//{
-			//	tempStr = token.substr(k, i - k);
-			//	if (isWhitespace(tempStr))
-			//	{
-			//		Tokens.push_back(tempStr);
-			//	}
-			//	k = i + 1;
-			//}
-			//else if (token[i] == '.')
-			//{
-			//	tempStr = token.substr(k, i - k);
-			//	if (isWhitespace(tempStr))
-			//	{
-			//		Tokens.push_back(tempStr);
-			//	}
-			//	k = i + 1;
-			//}
+			k = 0;
 
-			// Checks for whitespace as deliminator
-			if (token[i] == ' ')
+			// Loops through the string
+			for (i = 0; i < token.length(); i++)
 			{
-				tempStr = token.substr(k, i - k);
-				if (!isWhitespace(tempStr))
+				//if (token[i] == ',')
+				//{
+				//	tempStr = token.substr(k, i - k);
+				//	if (isWhitespace(tempStr))
+				//	{
+				//		Tokens.push_back(tempStr);
+				//	}
+				//	k = i + 1;
+				//}
+				//else if (token[i] == ' ')
+				//{
+				//	tempStr = token.substr(k, i - k);
+				//	if (isWhitespace(tempStr))
+				//	{
+				//		Tokens.push_back(tempStr);
+				//	}
+				//	k = i + 1;
+				//}
+				//else if (token[i] == '.')
+				//{
+				//	tempStr = token.substr(k, i - k);
+				//	if (isWhitespace(tempStr))
+				//	{
+				//		Tokens.push_back(tempStr);
+				//	}
+				//	k = i + 1;
+				//}
+
+				// Checks for whitespace as deliminator
+				if (token[i] == ' ')
 				{
-					Tokens.push_back(tempStr);
-				}
-				k = i + 1;
-			}// If
-			else if (i == token.length() - 1)
-			{
-				tempStr = token.substr(k, i - k + 1);
-				if (!isWhitespace(tempStr))
+					tempStr = token.substr(k, i - k);
+					if (!isWhitespace(tempStr))
+					{
+						Tokens.push_back(tempStr);
+					}
+					k = i + 1;
+				}// If
+				else if (i == token.length() - 1)
 				{
-					Tokens.push_back(tempStr);
-				}
-			}// Else if
-		}// For
+					tempStr = token.substr(k, i - k + 1);
+					if (!isWhitespace(tempStr))
+					{
+						Tokens.push_back(tempStr);
+					}
+				}// Else if
+			}// For
+		}// While
 
 		// Return
 		return Tokens;
