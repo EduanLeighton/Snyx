@@ -81,13 +81,19 @@ public:
 	}// tokenize
 
 private:
+	// Procedure to post the token
 	static void nameless(string& token, vector<string>& Tokens, int currentPos, int lastPos)
 	{
+		// Decleration of variables
 		string tempStr;
 
+		// Set's current token
 		tempStr = token.substr(lastPos, currentPos - lastPos);
+
+		// Checks for whitespace
 		if (tempStr != " " || tempStr != "\t" || tempStr != "\n" || tempStr != "\r" || tempStr != "")
 		{
+			// Pushes the token
 			Tokens.push_back(tempStr);
 		}
 	};
