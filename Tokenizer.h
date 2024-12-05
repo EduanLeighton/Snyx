@@ -26,6 +26,7 @@ public:
 		// Gets the string to tokenize
 		while (getline(strToken, token))
 		{
+			// Resets variables
 			k = 0;
 
 			// Loops through the string
@@ -62,20 +63,15 @@ public:
 				// Checks for whitespace as deliminator
 				if (token[i] == ' ')
 				{
-					tempStr = token.substr(k, i - k);
-					if (tempStr != " " || tempStr != "\t" || tempStr != "\n" || tempStr != "\r" || tempStr != "")
-					{
-						Tokens.push_back(tempStr);
-					}
+					// Posts the token
+					nameless(token, Tokens, i, k);
+					// Sets the last position
 					k = i + 1;
 				}// If
 				else if (i == token.length() - 1)
 				{
-					tempStr = token.substr(k, i - k + 1);
-					if (tempStr != " " || tempStr != "\t" || tempStr != "\n" || tempStr != "\r" || tempStr != "")
-					{
-						Tokens.push_back(tempStr);
-					}
+					// Posts the token
+					nameless(token, Tokens, i + 1, k);
 				}// Else if
 			}// For
 		}// While
@@ -85,6 +81,17 @@ public:
 	}// tokenize
 
 private:
+	static void nameless(string& token, vector<string>& Tokens, int currentPos, int lastPos)
+	{
+		string tempStr;
+
+		tempStr = token.substr(lastPos, currentPos - lastPos);
+		if (tempStr != " " || tempStr != "\t" || tempStr != "\n" || tempStr != "\r" || tempStr != "")
+		{
+			Tokens.push_back(tempStr);
+		}
+	};
+
 
 };
 
