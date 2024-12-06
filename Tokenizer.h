@@ -89,6 +89,9 @@ private:
 		// Set's current token
 		tempStr = token.substr(lastPos, currentPos - lastPos);
 
+		tempStr.erase(0, tempStr.find_first_not_of(" \t\n\r")); // Removes leading whitespace
+		tempStr.erase(tempStr.find_last_not_of(" \t\n\r") + 1); // Removes trailing whitespace
+
 		// Checks for whitespace
 		if (tempStr != " " || tempStr != "\t" || tempStr != "\n" || tempStr != "\r" || tempStr != "")
 		{
