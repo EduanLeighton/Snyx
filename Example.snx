@@ -3,5 +3,5 @@
 Main<proc>()
 {
 	test<string> = Hello World
-	test.Display
+	Display(test)
 }
