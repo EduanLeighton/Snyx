@@ -1,2 +1,7 @@
-test<string> = Hello World
-test.Display
+#use <Basic>
+
+Main<proc>()
+{
+	test<string> = Hello World
+	test.Display
+}
