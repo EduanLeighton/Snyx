@@ -63,14 +63,14 @@ public:
 				if (token[i] == ' ')
 				{
 					// Posts the token
-					nameless(token, Tokens, i, k);
+					processToken(token, Tokens, i, k);
 					// Sets the last position
 					k = i + 1;
 				}// If
 				else if (i == token.length() - 1)
 				{
 					// Posts the token
-					nameless(token, Tokens, i + 1, k);
+					processToken(token, Tokens, i + 1, k);
 				}// Else if
 			}// For
 		}// While
@@ -81,7 +81,7 @@ public:
 
 private:
 	// Procedure to post the token
-	static void nameless(string& token, vector<string>& Tokens, int currentPos, int lastPos)
+	static void processToken(string& token, vector<string>& Tokens, int currentPos, int lastPos)
 	{
 		// Decleration of variables
 		string tempStr;
@@ -98,7 +98,7 @@ private:
 			// Pushes the token
 			Tokens.push_back(tempStr);
 		}
-	}; // nameless
+	}; // processToken
 
 };
 
