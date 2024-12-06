@@ -3,7 +3,7 @@
 
 #include <string>
 
-struct class TokenType {
+class TokenType {
     IDENTIFIER,
     KEYWORD,
     NUMBER,

@@ -1,5 +1,5 @@
-#ifndef LANGUAGES_H
-#define LANGUAGES_H
+#ifndef SNYXFILEHANDLING_H
+#define SNYXFILEHANDLING_H
 
 #include <iostream>
 #include <string>
@@ -49,8 +49,8 @@ public:
 		// Check if the file is open
 		if (!file.is_open())
 		{
-			// Runtime error for file creation
-			throw runtime_error("Could not create file: " + fileName);
+			// Runtime error for file opening
+			throw runtime_error("Could not open file: " + fileName);
 		}
 
 		// Check the file type
@@ -68,7 +68,21 @@ public:
 	}; // saveFile
 
 private:
+	// Creates the snx file
+	static void createFile(const string& fileName)
+	{
+		ofstream file(fileName); // Open the file
+
+		// Check if the file is open
+		if (!file.is_open())
+		{
+			// Runtime error for file creation
+			throw runtime_error("Could not create file: " + fileName);
+		}
+
+		file.close(); // Close the file
+	};
 
 };
 
-#endif
+#endif // SNYXFILEHANDLING_H

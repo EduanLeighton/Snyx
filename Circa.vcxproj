@@ -131,7 +131,7 @@
     <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="LanguageFiles.h" />
+    <ClInclude Include="SnyxFileHandling.h" />
     <ClInclude Include="Tokenizer.h" />
     <ClInclude Include="TokenTypes.h" />
   </ItemGroup>

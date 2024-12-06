@@ -26,7 +26,7 @@
     <ClInclude Include="Tokenizer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="LanguageFiles.h">
+    <ClInclude Include="SnyxFileHandling.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

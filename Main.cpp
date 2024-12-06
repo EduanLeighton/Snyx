@@ -1,7 +1,7 @@
 #include <string>
 #include <iostream>
 #include "Tokenizer.h"
-#include "LanguageFiles.h" // I know weird names, but it works
+#include "SnyxFileHandling.h" // I know weird names, but it works
 
 using namespace std;
 
